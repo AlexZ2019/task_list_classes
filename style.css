@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header, .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    background-color: #e2f4fe;
+}
+
+.header {
+    height: 10vh;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.header > img, .footer > img {
+    width: 50px
+}
+
+.header > nav > a, .footer > nav > a {
+    display: inline-block;
+    margin: 15px;
+    text-decoration: none;
+}
+
+.footer {
+    margin-top: auto;
+}
+.footer > nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-lists {
+    margin: 0 15vw;
+}
+
+.task-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 50px 0;
+    max-width: 80vw;
+}
+
+.manage-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.add-task {
+    margin-bottom: 7px;
+}
+
+.add-task > input {
+    margin-right: 10px;
+    width: 80%;
+    height: 25px;
+    border-radius: 5px;
+    border: 2px solid #2361cc;
+    outline:none;
+}
+.add-task-button {
+    height: 30px;
+}
+.add-task > input:focus, .add-task > input:active {
+    border: 2px solid #2361cc;
+}
+button, select {
+    height: 100%;
+    background-color: #2361cc;
+    color: white;
+    border-radius: 5px;
+    padding: 0 5px;
+    border: 1px solid #2361cc;
+    cursor: pointer;
+    outline:none;
+}
+
+button:active, button:focus, select:focus, select:active {
+    overflow: hidden;
+}
+
+.empty-list {
+    height: 30px;
+    font-weight: bold;
+}
+
+.clear-list-button {
+    width: 75px;
+    height: 30px;
+    background-color: red;
+    border-color: red;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 2px solid #0a95ff;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.list-item .delete-task-button {
+    height: 30px;
+    background-color: red;
+    border-color: red;
+    margin: 5px;
+}
+
+.list-item select {
+    height: 30px;
+}
+
+@media (max-width: 571px) {
+    .add-task > input {
+        width: auto;
+    }
+}
+
+@media (max-width: 364px) {
+    .header {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .header > nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .task-list-wrapper {
+        padding-top: 5px ;
+    }
+
+    .list-item {
+        flex-direction: column;
+    }
+
+    .add-task-button {
+        margin-top: 5px;
+    }
+}
